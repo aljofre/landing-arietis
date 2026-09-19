@@ -1,17 +1,162 @@
 ---
-
+// src/pages/index.astro
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Geotecnia | Arietis Software</title>
+    <meta name="description" content="App de ingeniería geotécnica offline para registro de calicatas y ensayos in-situ." />
+</head>
+<body>
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Smart Geotecnia</h1>
+            <p>La evolución del trabajo en terreno por Arietis Software</p>
+            <!-- REEMPLAZA ESTE LINK POR TU ARCHIVO ALOJADO EN DRIVE O R2 -->
+            <a href="URL_DE_TU_APK" class="btn-download" target="_blank" rel="noopener noreferrer">
+                Descargar APK (Beta Gratuita)
+            </a>
+            <span class="disclaimer">*Al instalar la Beta, Android solicitará permisos de orígenes desconocidos.</span>
+        </div>
+    </main>
+
+    <section class="content">
+        <h2>Ingeniería Geotécnica 100% Offline</h2>
+        <p class="subtitle">Una herramienta diseñada para agilizar el registro estratigráfico, ensayos de permeabilidad y geofísica, sin depender de la señal celular.</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">⛏️</div>
+                <h3>Estándar FT-06</h3>
+                <p>Descripciones estratigráficas automáticas y normadas para suelos gruesos y finos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💧</div>
+                <h3>Data Logger Inteligente</h3>
+                <p>Análisis de curva en tiempo real para ensayos Porchet e Índice de Absorción.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📡</div>
+                <h3>Exportación Total</h3>
+                <p>Genera reportes CSV, KMZ y anexo fotográfico estructurado en un solo ZIP.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>¿Tienes dudas o feedback sobre la Beta?</p>
+        <a href="mailto:contacto@arietisgeo.cl" class="btn-contact">Enviar correo a contacto@arietisgeo.cl</a>
+        <p class="copyright">&copy; 2026 Arietis Software</p>
+    </footer>
+</body>
 </html>
+
+<style>
+    :root {
+        --primary: #2E7D32;
+        --secondary: #ffb300;
+        --bg-color: #f4f7f6;
+        --text-main: #263238;
+    }
+    
+    body {
+        font-family: system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+    }
+
+    .hero {
+        background: linear-gradient(135deg, #1b5e20 0%, var(--primary) 100%);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .hero h1 { margin: 0; font-size: 3rem; letter-spacing: -1px; }
+    .hero p { font-size: 1.3rem; margin-top: 10px; opacity: 0.9; }
+    
+    .btn-download {
+        display: inline-block;
+        background-color: var(--secondary);
+        color: #1b5e20;
+        padding: 16px 32px;
+        margin-top: 24px;
+        text-decoration: none;
+        font-weight: 800;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        transition: transform 0.2s, background 0.3s;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .btn-download:hover {
+        background-color: #ffc107;
+        transform: translateY(-2px);
+    }
+
+    .disclaimer {
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 16px;
+        opacity: 0.8;
+    }
+
+    .content {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .subtitle { font-size: 1.1rem; color: #546e7a; margin-bottom: 40px; }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 30px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        border: 1px solid #eceff1;
+    }
+
+    .icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .feature-card h3 { margin-top: 0; color: var(--primary); }
+    .feature-card p { font-size: 0.95rem; color: #607d8b; margin: 0; }
+
+    .footer {
+        background-color: var(--text-main);
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: 60px;
+    }
+
+    .btn-contact {
+        display: inline-block;
+        color: var(--secondary);
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid var(--secondary);
+        padding: 10px 20px;
+        border-radius: 6px;
+        margin: 10px 0;
+        transition: all 0.3s;
+    }
+
+    .btn-contact:hover {
+        background-color: var(--secondary);
+        color: var(--text-main);
+    }
+
+    .copyright { font-size: 0.8rem; margin-top: 30px; opacity: 0.6; }
+</style>
