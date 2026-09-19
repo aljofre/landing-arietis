@@ -8,155 +8,303 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Geotecnia | Arietis Software</title>
     <meta name="description" content="App de ingeniería geotécnica offline para registro de calicatas y ensayos in-situ." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="hero">
+        <div class="topo-background"></div>
         <div class="hero-content">
+            <span class="badge">BETA GRATUITA</span>
             <h1>Smart Geotecnia</h1>
-            <p>La evolución del trabajo en terreno por Arietis Software</p>
-            <!-- REEMPLAZA ESTE LINK POR TU ARCHIVO ALOJADO EN DRIVE O R2 -->
+            <p>La evolución del trabajo en terreno por <strong>Arietis Software</strong></p>
             <a href="URL_DE_TU_APK" class="btn-download" target="_blank" rel="noopener noreferrer">
-                Descargar APK (Beta Gratuita)
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Descargar APK
             </a>
-            <span class="disclaimer">*Al instalar la Beta, Android solicitará permisos de orígenes desconocidos.</span>
+            <span class="disclaimer">*Android solicitará permisos de orígenes desconocidos.</span>
         </div>
     </main>
 
     <section class="content">
-        <h2>Ingeniería Geotécnica 100% Offline</h2>
-        <p class="subtitle">Una herramienta diseñada para agilizar el registro estratigráfico, ensayos de permeabilidad y geofísica, sin depender de la señal celular.</p>
+        <div class="section-header">
+            <h2>Ingeniería Geotécnica 100% Offline</h2>
+            <p class="subtitle">Diseñada para agilizar el registro estratigráfico, ensayos de permeabilidad y geofísica en faena, sin depender de la señal celular.</p>
+        </div>
         
         <div class="features">
             <div class="feature-card">
-                <div class="icon">⛏️</div>
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.531 12.469L6.619 20.38a1 1 0 1 1-1.414-1.414l7.912-7.912"></path><path d="M15.686 4.314A3.429 3.429 0 0 0 10.835 4L8.5 6.336l9.164 9.164 2.336-2.336a3.428 3.428 0 0 0-.314-4.851z"></path></svg>
+                </div>
                 <h3>Estándar FT-06</h3>
                 <p>Descripciones estratigráficas automáticas y normadas para suelos gruesos y finos.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">💧</div>
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                </div>
                 <h3>Data Logger Inteligente</h3>
                 <p>Análisis de curva en tiempo real para ensayos Porchet e Índice de Absorción.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">📡</div>
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg>
+                </div>
                 <h3>Exportación Total</h3>
-                <p>Genera reportes CSV, KMZ y anexo fotográfico estructurado en un solo ZIP.</p>
+                <p>Genera reportes CSV, KMZ y anexo fotográfico estructurado en un solo archivo ZIP.</p>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>¿Tienes dudas o feedback sobre la Beta?</p>
-        <a href="mailto:contacto@arietisgeo.cl" class="btn-contact">Enviar correo a contacto@arietisgeo.cl</a>
-        <p class="copyright">&copy; 2026 Arietis Software</p>
+        <div class="footer-content">
+            <p class="feedback-text">¿Tienes dudas o feedback sobre la Beta?</p>
+            <a href="mailto:contacto@arietisgeo.cl" class="btn-contact">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                contacto@arietisgeo.cl
+            </a>
+            <p class="copyright">&copy; 2026 Arietis Software</p>
+        </div>
     </footer>
 </body>
 </html>
 
 <style>
     :root {
-        --primary: #2E7D32;
-        --secondary: #ffb300;
-        --bg-color: #f4f7f6;
-        --text-main: #263238;
+        --primary-color: #f59e0b; /* Amber/Gold */
+        --primary-hover: #d97706;
+        --bg-dark: #111827;
+        --bg-light: #f9fafb;
+        --text-main: #1f2937;
+        --text-muted: #6b7280;
+        --card-border: #e5e7eb;
     }
+    
+    * { box-sizing: border-box; }
     
     body {
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family: 'Inter', system-ui, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: var(--bg-color);
+        background-color: var(--bg-light);
         color: var(--text-main);
         line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
     }
 
+    /* Hero Section with CSS Topography Pattern */
     .hero {
-        background: linear-gradient(135deg, #1b5e20 0%, var(--primary) 100%);
+        position: relative;
+        background-color: var(--bg-dark);
         color: white;
-        padding: 80px 20px;
+        padding: 100px 20px 120px;
         text-align: center;
+        overflow: hidden;
     }
 
-    .hero h1 { margin: 0; font-size: 3rem; letter-spacing: -1px; }
-    .hero p { font-size: 1.3rem; margin-top: 10px; opacity: 0.9; }
+    .topo-background {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .badge {
+        display: inline-block;
+        background-color: rgba(245, 158, 11, 0.1);
+        color: var(--primary-color);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .hero h1 { 
+        margin: 0; 
+        font-size: 4rem; 
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        background: linear-gradient(to right, #fff, #d1d5db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .hero p { 
+        font-size: 1.25rem; 
+        margin-top: 16px; 
+        color: #9ca3af;
+        font-weight: 400;
+    }
+
+    .hero p strong { color: white; }
     
     .btn-download {
-        display: inline-block;
-        background-color: var(--secondary);
-        color: #1b5e20;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--primary-color);
+        color: var(--bg-dark);
         padding: 16px 32px;
-        margin-top: 24px;
+        margin-top: 32px;
         text-decoration: none;
         font-weight: 800;
         border-radius: 8px;
-        font-size: 1.2rem;
-        transition: transform 0.2s, background 0.3s;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        font-size: 1.1rem;
+        transition: all 0.2s ease;
     }
     
     .btn-download:hover {
-        background-color: #ffc107;
+        background-color: var(--primary-hover);
         transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
     }
 
     .disclaimer {
         display: block;
-        font-size: 0.85rem;
-        margin-top: 16px;
-        opacity: 0.8;
+        font-size: 0.8rem;
+        margin-top: 20px;
+        color: #6b7280;
     }
 
+    /* Features Section */
     .content {
-        max-width: 900px;
-        margin: 60px auto;
+        max-width: 1100px;
+        margin: -60px auto 80px;
         padding: 0 20px;
-        text-align: center;
+        position: relative;
+        z-index: 20;
     }
 
-    .subtitle { font-size: 1.1rem; color: #546e7a; margin-bottom: 40px; }
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle { 
+        font-size: 1.1rem; 
+        color: var(--text-muted); 
+        max-width: 700px;
+        margin: 0 auto;
+    }
 
     .features {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 24px;
     }
 
     .feature-card {
         background: white;
-        padding: 30px 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        border: 1px solid #eceff1;
+        padding: 40px 30px;
+        border-radius: 16px;
+        text-align: left;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        border: 1px solid var(--card-border);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .icon { font-size: 2.5rem; margin-bottom: 16px; }
-    .feature-card h3 { margin-top: 0; color: var(--primary); }
-    .feature-card p { font-size: 0.95rem; color: #607d8b; margin: 0; }
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    }
 
+    .icon-wrapper { 
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        background-color: #fffbeb;
+        color: var(--primary-hover);
+        border-radius: 12px;
+        margin-bottom: 24px;
+    }
+
+    .icon-wrapper svg { width: 28px; height: 28px; }
+
+    .feature-card h3 { 
+        margin: 0 0 12px 0; 
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--text-main);
+    }
+    
+    .feature-card p { 
+        font-size: 1rem; 
+        color: var(--text-muted); 
+        margin: 0; 
+        line-height: 1.5;
+    }
+
+    /* Footer */
     .footer {
-        background-color: var(--text-main);
-        color: white;
+        background-color: white;
+        border-top: 1px solid var(--card-border);
+        padding: 60px 20px;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
         text-align: center;
-        padding: 40px 20px;
-        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback-text {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-main);
+        margin-bottom: 24px;
     }
 
     .btn-contact {
-        display: inline-block;
-        color: var(--secondary);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-main);
         text-decoration: none;
-        font-weight: bold;
-        border: 1px solid var(--secondary);
-        padding: 10px 20px;
-        border-radius: 6px;
-        margin: 10px 0;
-        transition: all 0.3s;
+        font-weight: 600;
+        border: 1px solid var(--card-border);
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        background-color: white;
     }
 
     .btn-contact:hover {
-        background-color: var(--secondary);
-        color: var(--text-main);
+        border-color: var(--primary-color);
+        color: var(--primary-hover);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
-    .copyright { font-size: 0.8rem; margin-top: 30px; opacity: 0.6; }
+    .copyright { 
+        font-size: 0.9rem; 
+        margin-top: 40px; 
+        color: var(--text-muted); 
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 { font-size: 2.5rem; }
+        .hero { padding: 60px 20px 80px; }
+        .content { margin-top: -40px; }
+    }
 </style>
