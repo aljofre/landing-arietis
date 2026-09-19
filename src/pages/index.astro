@@ -15,8 +15,12 @@
         <div class="topo-background"></div>
         <div class="hero-content">
             <span class="badge">BETA GRATUITA</span>
+            
+            <img src="/logo.png" alt="Logo Smart Geotecnia" class="app-logo" />
+            
             <h1>Smart Geotecnia</h1>
             <p>La evolución del trabajo en terreno por <strong>Arietis Software</strong></p>
+            
             <a href="https://drive.google.com/file/d/1x81Sckm3wGcDPxrRur7z7mXRrYkp02SM/view?usp=sharing" class="btn-download" target="_blank" rel="noopener noreferrer">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Descargar APK
@@ -71,7 +75,7 @@
 
 <style>
     :root {
-        --primary-color: #f59e0b; /* Amber/Gold */
+        --primary-color: #f59e0b; /* Amber para el CTA principal */
         --primary-hover: #d97706;
         --bg-dark: #111827;
         --bg-light: #f9fafb;
@@ -92,12 +96,12 @@
         -webkit-font-smoothing: antialiased;
     }
 
-    /* Hero Section with CSS Topography Pattern */
+    /* Hero Section */
     .hero {
         position: relative;
         background-color: var(--bg-dark);
         color: white;
-        padding: 100px 20px 120px;
+        padding: 80px 20px 100px;
         text-align: center;
         overflow: hidden;
     }
@@ -114,34 +118,51 @@
         z-index: 10;
         max-width: 800px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+    /* Minimalist Glassmorphism Badge */
     .badge {
         display: inline-block;
-        background-color: rgba(245, 158, 11, 0.1);
-        color: var(--primary-color);
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 800;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        border: 1px solid rgba(245, 158, 11, 0.3);
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: #e5e7eb;
+        padding: 4px 14px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        margin-bottom: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-transform: uppercase;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* App Logo Styling */
+    .app-logo {
+        width: 140px;
+        height: auto;
+        margin-bottom: 24px;
+        border-radius: 28px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
 
     .hero h1 { 
         margin: 0; 
-        font-size: 4rem; 
+        font-size: 3.5rem; 
         font-weight: 800;
-        letter-spacing: -1.5px;
+        letter-spacing: -1px;
         background: linear-gradient(to right, #fff, #d1d5db);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     
     .hero p { 
-        font-size: 1.25rem; 
-        margin-top: 16px; 
+        font-size: 1.15rem; 
+        margin-top: 12px; 
         color: #9ca3af;
         font-weight: 400;
     }
@@ -176,10 +197,10 @@
         color: #6b7280;
     }
 
-    /* Features Section */
+    /* Features Section - Corrección de márgenes */
     .content {
         max-width: 1100px;
-        margin: -60px auto 80px;
+        margin: 60px auto 80px; /* Se eliminó el margen negativo */
         padding: 0 20px;
         position: relative;
         z-index: 20;
@@ -213,7 +234,7 @@
     .feature-card {
         background: white;
         padding: 40px 30px;
-        border-radius: 16px;
+        border-radius: 12px;
         text-align: left;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         border: 1px solid var(--card-border);
@@ -231,8 +252,8 @@
         justify-content: center;
         width: 56px;
         height: 56px;
-        background-color: #fffbeb;
-        color: var(--primary-hover);
+        background-color: #f3f4f6; /* Tono neutral sutil */
+        color: #4b5563; /* Gris oscuro elegante */
         border-radius: 12px;
         margin-bottom: 24px;
     }
@@ -291,9 +312,8 @@
     }
 
     .btn-contact:hover {
-        border-color: var(--primary-color);
-        color: var(--primary-hover);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        border-color: var(--text-muted);
+        background-color: #f9fafb;
     }
 
     .copyright { 
@@ -305,6 +325,6 @@
     @media (max-width: 768px) {
         .hero h1 { font-size: 2.5rem; }
         .hero { padding: 60px 20px 80px; }
-        .content { margin-top: -40px; }
+        .app-logo { width: 100px; }
     }
 </style>
