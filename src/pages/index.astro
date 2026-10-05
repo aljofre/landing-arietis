@@ -29,11 +29,10 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                 Disponible en Google Play
             </a>
-            <span class="disclaimer">*Android solicitará permisos de orígenes desconocidos.</span>
         </div>
     </main>
 
-    <section class="content">
+<section class="content">
         <div class="section-header">
             <h2>Ingeniería Geotécnica 100% Offline</h2>
             <p class="subtitle">Diseñada para agilizar el registro estratigráfico, ensayos de permeabilidad y geofísica en faena, sin depender de la señal celular.</p>
@@ -44,7 +43,7 @@
                 <div class="icon-wrapper">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.531 12.469L6.619 20.38a1 1 0 1 1-1.414-1.414l7.912-7.912"></path><path d="M15.686 4.314A3.429 3.429 0 0 0 10.835 4L8.5 6.336l9.164 9.164 2.336-2.336a3.428 3.428 0 0 0-.314-4.851z"></path></svg>
                 </div>
-                <h3>Estándar FT-06</h3>
+                <h3>Estándar de la Industria</h3>
                 <p>Descripciones estratigráficas automáticas y normadas para suelos gruesos y finos.</p>
             </div>
             <div class="feature-card">
@@ -66,7 +65,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p class="feedback-text">¿Tienes dudas o feedback sobre la Beta?</p>
+            <p class="feedback-text">¿Tienes dudas o feedback sobre la aplicación?</p>
             <a href="mailto:contacto@arietisgeo.cl" class="btn-contact">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 contacto@arietisgeo.cl
@@ -229,7 +228,7 @@
         margin: 0 auto;
     }
 
-    .features {
+.features {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 24px;
@@ -242,12 +241,33 @@
         text-align: left;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         border: 1px solid var(--card-border);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Nuevo efecto: Borde superior dinámico */
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-color), #fcd34d);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
     }
 
     .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+        border-color: #d1d5db;
+    }
+
+    .feature-card:hover::before {
+        transform: scaleX(1);
     }
 
     .icon-wrapper { 
@@ -256,13 +276,19 @@
         justify-content: center;
         width: 56px;
         height: 56px;
-        background-color: #f3f4f6; /* Tono neutral sutil */
-        color: #4b5563; /* Gris oscuro elegante */
+        background-color: #f3f4f6; 
+        color: #4b5563; 
         border-radius: 12px;
         margin-bottom: 24px;
+        transition: all 0.3s ease;
     }
 
-    .icon-wrapper svg { width: 28px; height: 28px; }
+    /* Nuevo efecto: Interacción de color en el icono */
+    .feature-card:hover .icon-wrapper {
+        background-color: #fffbeb;
+        color: var(--primary-hover);
+        transform: scale(1.05);
+    }
 
     .feature-card h3 { 
         margin: 0 0 12px 0; 
